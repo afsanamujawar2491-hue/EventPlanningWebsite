@@ -1,0 +1,241 @@
+/* === General Styles === */
+body, .hero {
+    background-color: #f7f7f7; /* light gray */
+    color: #2b2d42; /* dark gray text */
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+/* === Navbar === */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.navbar .nav-link {
+    color: #2b2d42;
+    font-weight: 500;
+}
+.navbar .nav-link.active {
+    color: #5c7cfa;
+}
+
+/* === Hero Section === */
+.hero {
+    background-color: #e7f0ff; /* very light blue */
+    text-align: center;
+    padding: 80px 20px;
+}
+.hero h1, .hero h2 {
+    color: #5c7cfa;
+}
+.hero p {
+    font-size: 18px;
+    color: #2b2d42;
+}
+
+/* === Cards (Packages/Services/Features) === */
+.package-card, .services-card {
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    color: #2b2d42;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    opacity: 0;
+}
+.package-card.show, .services-card.show {
+    opacity: 1;
+}
+.package-card:hover, .services-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(92,124,250,0.4);
+    border-color: #5c7cfa;
+}
+.package-card h5, .services-card h5 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #5c7cfa;
+}
+.package-card p, .services-card p {
+    font-size: 15px;
+}
+
+/* === Buttons === */
+.btn-primary {
+    background-color: #5c7cfa;
+    border: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.btn-primary:hover {
+    background-color: #74c0fc;
+    transform: scale(1.05);
+}
+
+/* === Ribbon === */
+.ribbon {
+    width: 120px;
+    height: 30px;
+    background-color: #5c7cfa;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    line-height: 30px;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 15px;
+    right: -30px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+/* === Footer === */
+/* Footer Styling */
+.footer {
+    background-color: #1a1f4b;
+    color: #ffffff;
+    font-size: 0.9rem;
+    border-top: 2px solid #5c7cfa;
+}
+
+.footer a {
+    color: #74c0fc;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-links {
+    margin-bottom: 15px;
+}
+
+.footer-social img {
+    width: 28px;
+    height: 28px;
+    margin: 0 8px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.2s ease;
+}
+
+.footer-social img:hover {
+    transform: scale(1.1);
+}
+
+
+.footer-social a {
+    transition: transform 0.2s, color 0.2s;
+}
+
+.footer-social a:hover {
+    transform: scale(1.2);
+    color: #5c7cfa; /* Blue hover color for modern theme */
+}
+
+/* === Fade-in Animation === */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* === Map Responsive === */
+.map-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+}
+.map-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 12px;
+}
+
+/* === Gallery Images === */
+.gallery-img {
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+/* WhatsApp Floating Button */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 100px; /* above enquiry button */
+    right: 30px;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #25D366; /* WhatsApp green */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+}
+
+.whatsapp-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+/* Team Section */
+.team-card {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(92,124,250,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(92,124,250,0.3);
+}
+
+.team-img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #5c7cfa;
+}
+
+.team-card h5 {
+    color: #5c7cfa;
+    margin-top: 10px;
+}
+.carousel-item img {
+    height: 400px;
+    
+   /* // object-fit: contain; */
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-item img {
+        height: 220px;
+    }
+}
